@@ -3,10 +3,10 @@ class PerfLab < Formula
 
   desc "Local FPS / CPU / GPU / power profiler for iPhone and Android, with one-tap onboarding wizard"
   homepage "https://github.com/walkpod1007/3cdog-perf"
-  url "https://github.com/walkpod1007/3cdog-perf/archive/refs/tags/v0.2.2.tar.gz"
-  # sha256 of the v0.2.2 release tarball (verified at publish time).
-  sha256 "fdaa0e37d5e4388218ae6b7e7f90987fb9ce3e607d2408950ce570785871eea6"
-  version "0.2.2"
+  url "https://github.com/walkpod1007/3cdog-perf/archive/refs/tags/v0.2.3.tar.gz"
+  # sha256 of the v0.2.3 release tarball (verified at publish time).
+  sha256 "284d8f26349fb03d4fc5b53d12f66d5c8eebc3ae94974018779dc4d28fcc8438"
+  version "0.2.3"
 
   # ``python@3.12`` is the floor chosen by the task brief for predictable
   # library compatibility. The 3cdog-perf package itself is stdlib-only, so
@@ -68,7 +68,7 @@ class PerfLab < Formula
     # (1) Binary wires up. ``--version`` prints the package version banner.
     version_output = shell_output("#{bin}/3cdog-perf --version")
     assert_match(/3cdog-perf/, version_output)
-    assert_match(/0\.2\.2/, version_output)
+    assert_match(/0\.2\.3/, version_output)
 
     # (2) Side-effect free startup probe. We launch the server bound to an
     # ephemeral port and confirm the onboarding endpoint answers with the
