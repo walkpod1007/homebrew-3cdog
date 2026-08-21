@@ -42,25 +42,26 @@ class PerfLab < Formula
 
   def caveats
     <<~EOS
-      3cdog-perf is installed. Two side-channel tools are referenced by the
-      in-app onboarding wizard but not auto-installed because they live in
-      different Homebrew namespaces / require PyPI resolution that the brew
-      sandbox cannot do for you:
+      ✅ 3cdog-perf 裝好了！
 
-        Android (adb):  brew install --cask android-platform-tools
-        iPhone (tunneld):
-                          brew install pipx && pipx ensurepath
-                          # then in a fresh shell:
-                          pipx install pymobiledevice3
-                          # keep a separate terminal open with:
-                          sudo pymobiledevice3 remote tunneld   (iOS 17+)
+      ▶ 現在就能啟動，直接跑：
 
-      Launch with:
+          3cdog-perf
 
-        3cdog-perf
+        瀏覽器會自動打開；沒跳的話，把 http://127.0.0.1:8765 貼到網址列。
 
-      The browser opens automatically. If it doesn't, copy
-      http://127.0.0.1:8765 into your browser.
+      ▶ 之後接手機測試時，還缺兩個小工具（畫面上的引導卡也會再提醒你，
+        現在不裝也沒關係）：
+
+        測 Android 手機 → 貼這行：
+          brew install --cask android-platform-tools
+
+        測 iPhone → 依序貼這三段：
+          brew install pipx && pipx ensurepath
+          （↑跑完先關掉終端機、重開一個新視窗，再貼下一行）
+          pipx install pymobiledevice3
+          （iOS 17 以上，測試期間要「另開一個終端機視窗」跑著這行不要關）
+          sudo pymobiledevice3 remote tunneld
     EOS
   end
 
