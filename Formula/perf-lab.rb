@@ -1,4 +1,4 @@
-class ThreecdogPerf < Formula
+class PerfLab < Formula
   include Language::Python::Virtualenv
 
   desc "Local FPS / CPU / GPU / power profiler for iPhone and Android, with one-tap onboarding wizard"
