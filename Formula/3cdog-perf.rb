@@ -4,13 +4,7 @@ class ThreecdogPerf < Formula
   desc "Local FPS / CPU / GPU / power profiler for iPhone and Android, with one-tap onboarding wizard"
   homepage "https://github.com/walkpod1007/3cdog-perf"
   url "https://github.com/walkpod1007/3cdog-perf/archive/refs/tags/v0.2.0.tar.gz"
-  # sha256 is intentionally a placeholder. After publishing the v0.2.0 tag, run
-  # ``brew fetch --deps --force walkpod1007/3cdog/3cdog-perf`` (or download the
-  # tarball manually with ``curl -fsSL <url> | shasum -a 256``) and replace
-  # the line below with the real digest before tapping the formula. The
-  # placeholder is part of the public release checklist — it makes it
-  # impossible for a casual reader to mistake the formula for a finished
-  # release without doing that one fetch step.
+  # sha256 of the v0.2.0 release tarball (verified at publish time).
   sha256 "3dc738d564b0dd8d71309fd4d037ad8660e1e9b89485d22110f21172dafc1340"
   version "0.2.0"
   revision 1
